@@ -23,18 +23,40 @@ $ cd prueba1
 $ npm install
 ```
 
-Create .env file with DB_URL and PORT
+Create .env file with DB_URL and PORT.
 
 ```
 DB_URL=DB_URL=mongodb+srv://<USER>:<PASSWORD>@<MONGODB DATABASE URL>
 PORT=3333
 ```
 
+### Start the server
+
+Start the server in development mode.
+
+```sh
+$ npm run dev
+```
+
+Start the server in production mode.
+
+```sh
+$ npm run start:api
+```
+
+### Tests
+
+Run test using Jest
+
+```sh
+$ npm test
+```
+
 ### Todos
 
  - Write more tests
  - Create API documentation
- - 
+
 License
 ----
 
