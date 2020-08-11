@@ -23,7 +23,10 @@ const profile = async (req, res) => {
       'nextjs',
       'jquery',
       'bootstrap'
-    ]
+    ],
+    thisProyect: {
+      repository: 'https://github.com/erevecov/prueba1'
+    }
   })
 }
 
