@@ -1,6 +1,7 @@
 const express = require('express')
 const rateLimit = require('express-rate-limit')
 const dotEnv = require('dotenv')
+const profile = require('./handlers/profile')
 const createPayment = require('./handlers/createPayment')
 const getPayment = require('./handlers/getPayment')
 const listPayments = require('./handlers/listPayments')
@@ -21,6 +22,7 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter)
 app.use(express.json())
 
+app.get('/', profile)
 app.get('/api/payments/:id', getPayment)
 app.get('/api/payments', listPayments)
 app.post('/api/payments', createPayment)
