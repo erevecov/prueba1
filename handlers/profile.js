@@ -25,7 +25,8 @@ const profile = async (req, res) => {
       'bootstrap'
     ],
     thisProyect: {
-      repository: 'https://github.com/erevecov/prueba1'
+      repository: 'https://github.com/erevecov/prueba1',
+      description: 'API REST de registro de pago de servicios profesionales en uf (unidad de fomento chile).'
     }
   })
 }
