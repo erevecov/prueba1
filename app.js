@@ -27,6 +27,10 @@ app.post('/api/payments', createPayment)
 app.delete('/api/payments/:id', deletePayment)
 app.put('/api/payments/:id', updatePayment)
 
-app.listen(port, () => {
-  console.log(`App listening at port: ${port}`)
-})
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log(`App listening at port: ${port}`)
+  })
+}
+
+module.exports = app

@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "lint": "standard"
+    "lint": "standard",
+    "test": "NODE_ENV=test jest --runInBand"
   },
   "author": "",
   "license": "ISC",
@@ -20,8 +21,10 @@
     "uuid": "^8.3.0"
   },
   "devDependencies": {
+    "jest": "^26.3.0",
     "nodemon": "^2.0.4",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "supertest": "^4.0.2"
   },
   "standard": {
     "ignore": []
@@ -29,6 +32,12 @@
   "eslintConfig": {
     "extends": [
       "./node_modules/standard/eslintrc.json"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
     ]
   }
 }

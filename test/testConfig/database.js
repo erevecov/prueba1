@@ -3,17 +3,18 @@ const dotEnv = require('dotenv')
 
 dotEnv.config()
 
-try {
-  if (process.env.NODE_ENV !== 'test') {
+module.exports = {
+  mongoose,
+  connect: () => {
+    mongoose.Promise = Promise
     mongoose.connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
       bufferMaxEntries: 0
     })
+  },
+  disconnect: done => {
+    mongoose.disconnect(done)
   }
-} catch (error) {
-  console.log(error)
 }
-
-module.exports = mongoose
