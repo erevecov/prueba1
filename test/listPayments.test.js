@@ -1,6 +1,5 @@
 /* eslint-env jest */
-
-const app = require('../app')
+const app = require('../index')
 const supertest = require('supertest')
 const request = supertest(app)
 const mongoDB = require('./testConfig/database')

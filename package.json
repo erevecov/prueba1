@@ -2,11 +2,12 @@
   "name": "prueba_1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon index.js",
     "lint": "standard",
-    "test": "NODE_ENV=test jest --runInBand"
+    "test": "NODE_ENV=test jest --runInBand",
+    "start:api": "NODE_ENV=production node index.js"
   },
   "author": "",
   "license": "ISC",
